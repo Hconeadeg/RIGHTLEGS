@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store Landing Page</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <button class="menu-button" id="menuButton"><i class="fas fa-bars"></i></button>
+                <a href="#" class="search-button"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="nav-right">
+                <a href="tel:+1234567890" class="phone-link"><i class="fas fa-phone"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="images/shoe making1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content">
+            <h1>Right Legs 25</h1>
+            <p>The Navigator</p>
+            <div class="buttons">
+                <button class="women-button">Women's New In</button>
+                <button class="men-button">Men's New In</button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="who-we-are" class="who-we-are">
+            <h2>Who We Are</h2>
+            <p>Welcome to our shoe store, where style meets comfort. We are dedicated to providing high-quality footwear for every occasion. Our passion for shoes drives us to curate the latest trends and timeless classics, ensuring you always step out in style.</p>
+            <p>Our commitment to excellence extends beyond our products. We strive to offer exceptional customer service and create a seamless shopping experience. Discover our collection and find your perfect pair today.</p>
+        </section>
+
+        <section id="women-shoes" class="product-section" style="display: none;">
+            <h2>Women's Shoes</h2>
+            <div class="product-grid" id="women-shoes-grid">
+                </div>
+        </section>
+
+        <section id="men-shoes" class="product-section" style="display: none;">
+            <h2>Men's Shoes</h2>
+            <div class="product-grid" id="men-shoes-grid">
+                </div>
+        </section>
+
+        <section id="contact" class="contact-section" style="display: none;">
+            <h2>Contact Us</h2>
+            <p>Phone: +123 456 7890</p>
+            <p>Email: info@shoestore.com</p>
+            <p>
+                Follow us:
+                <a href="#">Instagram</a> |
+                <a href="#">Twitter</a> |
+                <a href="#">WhatsApp</a>
+            </p>
+        </section>
+    </main>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#" class="close-button" id="closeMenuButton">x</a>
+        <a href="#" data-target="frontpage">Home</a>
+        <a href="#" data-target="women-shoes">Women's Shoes</a>
+        <a href="#" data-target="men-shoes">Men's Shoes</a>
+        <a href="#" data-target="who-we-are">About Us</a>
+        <a href="#" data-target="contact">Contact</a>
+    </div>
+
+    <section id="featured-shoes" class="featured-shoes">
+        <h2>Featured Shoes</h2>
+        <div class="shoe-slider-container">
+            <div class="shoe-slider" id="shoeSlider">
+                <div class="shoe-item">
+                    <img src="images/istockphoto-1.jpg" alt="Featured Shoe 1">
+                    <p>Shoe Name 1</p>
+                </div>
+                <div class="shoe-item">
+                    <img src="images/istockphoto-2.jpg" alt="Featured Shoe 2">
+                    <p>Shoe Name 2</p>
+                </div>
+                <div class="shoe-item">
+                    <img src="images/istockphoto-15.jpg" alt="Featured Shoe 3">
+                    <p>Shoe Name 3</p>
+                </div>
+                <div class="shoe-item">
+                    <img src="images/istockphoto-14.jpg" alt="Featured Shoe 4">
+                    <p>Shoe Name 4</p>
+                </div>
+                 <div class="shoe-item">
+                    <img src="images/istockphoto-9.jpg" alt="Featured Shoe 5">
+                    <p>Shoe Name 5</p>
+                </div>
+                <div class="shoe-item">
+                    <img src="images/istockphoto-8.jpg" alt="Featured Shoe 5">
+                    <p>Shoe Name 6</p>
+                </div>
+                <div class="shoe-item">
+                    <img src="images/istockphoto-12.jpg" alt="Featured Shoe 5">
+                    <p>Shoe Name 7</p>
+                </div>
+                <div class="shoe-item">
+                    <img src="images/istockphoto-1.jpg" alt="Featured Shoe 5">
+                    <p>Shoe Name 8</p>
+                </div>
+                <div class="shoe-item">
+                    <img src="images/istockphoto-2.jpg" alt="Featured Shoe 5">
+                    <p>Shoe Name 9</p>
+                </div>
+            </div>
+            <button class="slider-button prev-button" id="prevButton">❮</button>
+            <button class="slider-button next-button" id="nextButton">❯</button>
+            <div class="shop-all-button-container">
+                <a href="all_shoes.html" class="shop-all-button">Shop All</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <section class="newsletter-section">
+            <h2>Our newsletter is your shortcut to the latest trends, new arrivals, and exclusive sale updates.</h2>
+            <form action="https://example.com/subscription_confirmation" method="post" id="newsletterForm">
+                <div class="newsletter-input-container">
+                    <input type="email" id="emailInput" name="email" placeholder="Email address" required>
+                    <button type="submit" id="subscribeButton">→</button>
+                </div>
+                <p>By signing up you are consenting to receive updates about collections, news, promotions, store updates and competitions. Please refer to our <a href="#">Privacy Policy</a> for more information.</p>
+            </form>
+        </section>
+        <section class="footer-links">
+            <div class="footer-column">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Babies</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Payment</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Stories</a></li>
+                    <li><a href="#">Loyalty</a></li>
+                    <li><a href="#">Our Community</a></li>
+                     <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Store Locator</a></li>
+                    <li><a href="#">Product Care</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Sale Information</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Terms</h3>
+                <ul>
+                    <li><a href="#">T&Cs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookies Policy</a></li>
+                    <li><a href="#">Complaints</a></li>
+                    <li><a href="#">Counterfeit Websites</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Right Legs On You</a></li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+

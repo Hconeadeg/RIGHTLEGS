@@ -1,0 +1,502 @@
+/* CSS Reset (Normalize.css) */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+/* Custom Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    color: #333;
+}
+
+header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left a,
+.nav-right a {
+    display: flex;
+    align-items: center;
+}
+
+
+.phone-link {
+    color: #333;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+.phone-link:hover {
+    background-color: #f0f0f0;
+}
+
+.menu-button,
+.search-button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #333;
+}
+
+.menu-button:hover,
+.search-button:hover {
+    opacity: 0.7;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.buttons button {
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    color: #333;
+}
+
+.buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.who-we-are {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #e0e0e0;
+    color: #555;
+    line-height: 1.7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    /* 新增：确保内容不溢出 */
+}
+
+.who-we-are:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.who-we-are h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.who-we-are p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 101;
+    padding-top: 60px;
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 20px 0;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    color: #ddd;
+}
+
+.mobile-menu .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.who-we-are-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.who-we-are-images img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Important */
+    border: 2px solid #ccc;
+    transition: transform 0.2s ease-in-out;
+}
+
+.who-we-are-images img:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-right {
+        display: none;
+    }
+
+    .content h1 {
+        font-size: 2em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+
+    .buttons button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+/* small mobile devices */
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 1.5em;
+    }
+
+    .content p {
+        font-size: 0.9em;
+    }
+
+    .who-we-are h2 {
+        font-size: 1.5em;
+    }
+
+    .who-we-are p {
+        font-size: 1em;
+    }
+}
+.featured-shoes {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.featured-shoes h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.shoe-slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.shoe-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.shoe-item {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.shoe-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    z-index: 10;
+}
+
+.slider-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+.shop-all-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.shop-all-button {
+    background-color: #000;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.shop-all-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.shop-all-button:active {
+    transform: scale(0.95);
+}
+
+.shoe-card img {
+    width: 100%;          /* Make the image take up the full width of its container */
+    height: auto;         /* Maintain the image's aspect ratio */
+    object-fit: cover;    /* Important:  Crop and scale the image to fill the container */
+    aspect-ratio: 1 / 1;  /* Keep a 1:1 ratio */
+}
+
+.main-footer {
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 40px 20px;
+    font-size: 0.9em;
+}
+
+.newsletter-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.newsletter-section h2 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.newsletter-input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+
+#emailInput {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 1em;
+}
+
+#subscribeButton {
+    padding: 10px 15px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#subscribeButton:hover {
+    background-color: #0056b3;
+}
+
+.newsletter-section p {
+    font-size: 0.8em;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.newsletter-section a{
+  color: #0078d7;
+  text-decoration: none;
+}
+
+.newsletter-section a:hover{
+  text-decoration: underline;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.footer-column {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.9em;
+}
+
+.footer-column a:hover {
+    color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-column {
+        width: 100%;
+    }
+    .newsletter-input-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #emailInput{
+      border-radius: 5px 5px 0 0;
+      width: 80%;
+      max-width: 300px;
+    }
+    #subscribeButton{
+      border-radius: 0 0 5px 5px;
+      width: 80%;
+      max-width: 300px;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .shoe-item {
+        width: 180px;
+        margin-right: 15px;
+    }
+    .slider-button {
+        font-size: 1.2em;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .shoe-item {
+        width: 160px;
+        margin-right: 10px;
+    }
+    .featured-shoes h2{
+      font-size: 1.5em;
+    }
+}
