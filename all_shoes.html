@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Shoes</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+    <main class="all-shoes-page">
+        <h1>All Shoes</h1>
+        <div class="all-shoes-grid" id="allShoesGrid">
+            </div>
+    </main>
+    <script>
+        const container = document.getElementById('allShoesGrid');
+        const numberOfShoes = 18;
+        const minPrice = 50;
+        const maxPrice = 150;
+
+        // Array of image URLs (REPLACE THESE WITH YOUR ACTUAL URLs)
+        const shoeImages = [
+             //  <-- Replace with your image paths
+            "images/shoe2.jpg",
+            "images/shoe3.jpg",
+            "images/shoe4.jpg",
+            "images/shoe5.jpg",
+            "images/shoe6.jpg",
+            "images/shoe7.jpg",
+            "images/shoe8.jpg",
+            "images/shoe9.jpg",
+            "images/shoe10.jpg",
+            "images/shoe11.jpg",
+            "images/shoe12.jpg",
+            "images/shoe13.jpg",
+            "images/shoe14.jpg",
+            "images/shoe15.jpg",
+            "images/shoe16.jpg",
+            "images/shoe17.jpg",
+            "images/shoe18.jpg",
+        ];
+
+        function createShoeCard(shoeNumber) {
+            const shoeCard = document.createElement('div');
+            shoeCard.className = 'shoe-card';
+            // Get the image URL from the array
+            const imageUrl = shoeImages[shoeNumber - 1]; // Adjust index (0-based)
+            const price = `$${Math.floor(Math.random() * (maxPrice - minPrice + 1)) + minPrice}`;
+            shoeCard.innerHTML = `
+                <img src="${imageUrl}" alt="Shoe ${shoeNumber}">
+                <h3>Shoe Name <span class="math-inline">\{shoeNumber\}</h3\>
+<p class\="price"\></span>{price}</p>
+                <button>Add to Cart</button>
+            `;
+            return shoeCard;
+        }
+
+        for (let i = 1; i <= numberOfShoes; i++) {
+            container.appendChild(createShoeCard(i));
+        }
+    </script>
+</body>
+</html>
